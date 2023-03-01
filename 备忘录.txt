@@ -1,0 +1,41 @@
+tomcat已安装在百度下载位置 。配置环境变量将bin目录写入。将war包放入webapp目录下，去bin下启动startup.bat文件。
+访问localhost:80\crawlerWebApp\index.jsp端口（默认8080，自己改为了80）
+
+jetty以maven插件形式运行
+jetty带端口命令就注释掉pom.xml文件中的端口（不带端口就jetty:run）带端口的命令jetty:run -Djetty.port=8899
+配置里面设置了浏览器访问时端口号后带的
+访问路劲即项目名
+
+idea使用tomcat插件，(不需要使用电脑上安装的tomcat)pom.xml文件中添加依赖，然后edit configurations 添加maven启动，命令为tomcat7:run,然后pom.xml中端口修改为了80，
+路径修改为/test    访问方式为localhost:80\test\index.jsp
+
+maven一般 项目使用模板就选择快速开始，打包成jar包，也可直接运行
+
+maven webapp项目就选择webapp模板，修改pom.xnl文件，配置服务器插件
+
+ </pluginManagement>这个标签可以删除没什么用
+ <scope>test</scope>测试时用可以注销掉
+slf4j没有实现解决：抽象层+中间层+实现层的方式解决。添加中间层和实现层依赖。继续报错在log4j.properties配置文件中添加信息
+
+GET把参数包含在URL中
+.m文件是maven数据库
+
+springboot项目只需要包含web功能，创建controller包和类，新建模块，使用maven，空项目，把父类pom.xml中的parent复制进来，还有依赖。创建
+主类添加注解，运行。	
+.mvn文件可以直接删除。可以在editor中忽略。.iml  mvnw  mvnw.cmd  
+
+spingboot主要是简化开发。简化依赖添加。先添加版本号，再定义模板依赖，再引用父类模板
+
+starter减少依赖配置，parent减少依赖冲突。坐标错误，指定版本。springboot导入的是start
+
+eolink使用需要切换回旧版，并且下载解压插件，然后edge添加扩展，然后重新进入页面
+
+1/2
+
+@restcontroller代替@restcontroller和@responsebody  @getmapping代替请求方法
+
+三种配置文件都在application.properties起效，其次yml文件起效。主流是yml。三个配置共存叠加，相互覆盖
+
+@ConfigurationProperties(prefix = "datasource")用类来封装配置
+
+不推荐使用@autowired属性注入（其是反射实现）
