@@ -38,4 +38,6 @@ eolink使用需要切换回旧版，并且下载解压插件，然后edge添加�
 
 @ConfigurationProperties(prefix = "datasource")用类来封装配置
 
-不推荐使用@autowired属性注入（其是反射实现）
+不推荐使用@autowired属性注入（其是反射实现）   
+
+弟2个
